@@ -23,10 +23,10 @@ class ResultActivity :AppCompatActivity() {
         val resultRandom = (1..2).random()
 
         //1일 경우 홀로, 2일 경우 짝수로 결과값 표시
-        strResult.text =  if (resultRandom == 1) {
-            "결과는 \'홀\'입니다."
-        } else {
-            "결과는 \'짝\'입니다."
+        strResult.text = when (resultRandom) {
+            1 -> "결과는 \'홀\'입니다."
+            2 -> "결과는 \'짝\'입니다."
+            else -> "오류"
         }
 
         //매인 액티비티에서 가져온 값을 숫자로 바꿔줌
