@@ -20,8 +20,7 @@ class ResultActivity :AppCompatActivity() {
         strResult = findViewById(R.id.result)
 
         //랜덤 함수로 숫자 1 혹은 2를 생성 후
-        val range = (1..2)
-        val resultRandom = range.random()
+        val resultRandom = (1..2).random()
 
         //1일 경우 홀로, 2일 경우 짝수로 결과값 표시
         strResult.text =  if (resultRandom == 1) {
